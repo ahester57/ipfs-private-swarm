@@ -35,12 +35,8 @@ peer identity: QmS4ustL54uo8FzR9455qaxZwuMiUhyvMcX9Ba8nUH4uVv
 
 Skip these steps if you have a pre-shared ```swarm.key```.  
 
-1. ```
-git clone https://github.com/Kubuxu/go-ipfs-swarm-key-gen
-```  
-2. ```
-cd go-ipfs-swarm-key-gen/
-```  
+1. ```git clone https://github.com/Kubuxu/go-ipfs-swarm-key-gen```  
+2. ```cd go-ipfs-swarm-key-gen/```  
 3. ```go run ipfs-swarm-key-gen/main.go > $IPFS_PATH/swarm.key```  
 
 
