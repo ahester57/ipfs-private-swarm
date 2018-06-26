@@ -1,7 +1,7 @@
 # IPFS Private Swarm
 
 ----
-## Requirements
+## 0. Requirements
 
 * [golang-go](https://golang.org/doc/)  
 * [go-ipfs](https://dist.ipfs.io/#go-ipfs)    
@@ -11,7 +11,7 @@
 *Docker is useful for deploying test networks.*
 
 ----
-## Setup
+## 1. Setup
 
 1. Download latest release [go-ipfs](https://dist.ipfs.io/#go-ipfs) binary and untar it.  
 
@@ -31,7 +31,7 @@ peer identity: QmS4ustL54uo8FzR9455qaxZwuMiUhyvMcX9Ba8nUH4uVv
  
 
 ----
-## Generate swarm.key
+## 2. Generate swarm.key
 
 Skip these steps if you have a pre-shared ```swarm.key```.  
 
@@ -50,7 +50,7 @@ Great, now your node won't connect to anyone without the same swarm.key. Be sure
 
 
 ----
-## Connect to your swarm
+## 3. Connect to your swarm
 
 1. Start your ipfs node with ```ipfs daemon```. You should see a message near the top. If you don't see the following message ensure the ```swarm.key``` file is in the correct location.
 
