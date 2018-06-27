@@ -34,7 +34,7 @@ The default ```$IPFS_PATH``` on Mac/Linux is ```~/.ipfs```.
 
 Ensure you have removed the default bootstrap nodes with:  
 
-```ipfs bootstrap```
+```ipfs bootstrap list```
 
 Nothing should appear.
 
@@ -71,7 +71,7 @@ Swarm key fingerprint: xxxxxxxxxxxxxxxx
 
 This is the final step. First, check the peers you are connected to with ```ipfs swarm peers```.  
 You should have no peers at this point since you have an empty bootstrap list.  
-View your bootstrap list with ```ipfs bootstrap```.  
+View your bootstrap list with ```ipfs bootstrap list```.  
 
 It should be empty. To add the boot node to your bootstrap list, run the following command with the peer address 
 provided to you.  
@@ -79,6 +79,11 @@ provided to you.
 ```ipfs bootstrap add /ip4/172.33.22.55/tcp/4001/ipfs/QmS4ustL54uo8FzR9455qaxZwuMiUhyvMcX9Ba8nUH4uVv```  
 
 Check your bootstrap list again. The given peer address should appear.  
+
+Now your node should connect to the boot node on start-up. To connect now, run:  
+
+```ipfs connect /ip4/172.33.22.55/tcp/4001/ipfs/QmS4ustL54uo8FzR9455qaxZwuMiUhyvMcX9Ba8nUH4uVv```
+
 Now check your connected peers again with ```ipfs swarm peers```. You should see the bootstrap node listed as a peer.
 
 If so then everything went right. Otherwise there is a problem. Potential problems include but are not limited to:  
