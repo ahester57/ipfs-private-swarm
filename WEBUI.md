@@ -8,7 +8,8 @@ points to the correct location. The WebUI is served by the IPFS network, and the
 of this location. Therefore, a custom client is needed in order to point to the correct hash.
 
 Note: This only needs to be done once per private network. Once the boot node serves the WebUI, all other nodes 
-only require the custom client which points to the correct hash.
+only require the custom client which points to the correct hash. After the following steps, any node using the 
+modified client will be able to use the WebUI at http://localhost:5001/webui.  
 
 ----
 ## 0. Requirements
@@ -37,7 +38,10 @@ If the version is still old, then you probably still have an old version of gola
 Why did we just install golang-1.10? We will need it when building the client from source.  
 But first we need the hash our client will point to.  
 
-1. Clone the repository https://github.com/ipfs-shipyard/ipfs-webui.  
+1. Clone the [ipfs-webui](https://github.com/ipfs-shipyard/ipfs-webui) repository.  
+
+    ```git clone https://github.com/ipfs-shipyard/ipfs-webui```  
+
 2. ```cd ipfs-webui && npm install```  
 3. Build to ```./dist``` with ```npm run build```  
 4. Upload the directory ```./dist``` to IPFS (should be running).  
@@ -55,11 +59,28 @@ But first we need the hash our client will point to.
 
 The file we want to change is ```go-ipfs/core/corehttp/webui.go```.  
 
-Clone the [go-ipfs](https://github.com/ipfs/go-ipfs) repository.  
+Grab the [go-ipfs](https://github.com/ipfs/go-ipfs) repository using ```go get```.  
     
-```git clone https://github.com/ipfs/go-ipfs```  
+```go get -u -d github.com/ipfs/go-ipfs```  
     
-Next, 
+Then,  
+
+```cd ~/go/src/github.com/ipfs/go-ipfs```  
+
+Now,  
+
+```vi core/corehttp/webui.go```  
+
+and change ```const WebUIPath```:  
+
+```const WebUIPath = "/ipfs/QmbhqZ17mpsz9FrHyUhh3SmLURRLxVBpft94ya8njLgvBM"```
+
+Now run ```make deps``` followed by ```make build```.  
+
+The executable is written to ```./cmd/ipfs/ipfs```. Copy this file to ```/usr/local/bin/ipfs```.  
+Now check it with ```which ipfs``` and ```ipfs version```.  
+
+
 
 
 
