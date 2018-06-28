@@ -68,10 +68,6 @@ It looks like ```/ip4/192.168.1.11/tcp/4001/ipfs/<peer_id>```.
 
 Congrats, you now have a private ipfs swarm up and running. Now to learn ipfs!
 
-*Note: Running an ipfs node in a docker container automatically connects 
-to the ipfs node running on the host machine. The docker-bound nodes will connect to nodes the host does. (Ubuntu 16.04)
-
-
 ----
 ## Usage
 
