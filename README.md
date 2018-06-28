@@ -4,7 +4,7 @@
 ## 0. Requirements
 
 * [golang-go](https://golang.org/doc/)  
-* [go-ipfs](https://dist.ipfs.io/#go-ipfs)    
+* [go-ipfs](https://github.com/ipfs/go-ipfs)    
 * [go-ipfs-swarm-key-gen](https://github.com/Kubuxu/go-ipfs-swarm-key-gen)  
  
 
