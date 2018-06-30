@@ -73,4 +73,9 @@ Congrats, you now have a private ipfs swarm up and running. Now to learn ipfs!
 
 Usage is congruent to the default usage of ipfs. Check out the documentation [here](https://ipfs.io/docs/). 
 
+* Set up boot node to run IPFS deamon on boot: [IPFS_SERVICE](https://github.com/ahester57/ipfs-private-swarm/blob/master/IPFS_SERVICE.md)  
+* Configure your local IPFS node for the private swarm: [CONNECT](https://github.com/ahester57/ipfs-private-swarm/blob/master/CONNECT.md)  
+* Enable the WebUI at localhost:5001/webui for your private swarm: [WEBUI](https://github.com/ahester57/ipfs-private-swarm/blob/master/WEBUI.md)  
+
+
 
