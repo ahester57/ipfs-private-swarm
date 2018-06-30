@@ -15,7 +15,7 @@
 
 1. Download latest release [go-ipfs](https://dist.ipfs.io/#go-ipfs) binary and untar it.  
 
-2. Now copy ```go-ipfs/ipfs``` to ```/usr/bin/ipfs``` or somewhere $PATH points to.  
+2. Now copy ```go-ipfs/ipfs``` to ```/usr/local/bin/ipfs``` or somewhere $PATH points to.  
 
 3. Test ipfs is working with ```ipfs help```  
 
