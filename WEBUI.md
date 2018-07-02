@@ -78,7 +78,11 @@ and change ```const WebUIPath```:
 Now run ```make deps``` followed by ```make build```.  
 
 The executable is written to ```./cmd/ipfs/ipfs```. Copy this file to ```/usr/local/bin/ipfs```.  
-Now check it with ```which ipfs``` and ```ipfs version```.  
+Now check it with ```which ipfs``` and ```ipfs version```.
+
+Location data will not work with a private swarm since geoip data is stored on the public IPFS filesystem. 
+In order to enable location data of peers, you will have to upload geoip data to your swarm and modify the source of 
+[ipfs-geoip](https://github.com/ipfs/ipfs-geoip) to point to the hashes of the uploaded data.  
 
 
 
