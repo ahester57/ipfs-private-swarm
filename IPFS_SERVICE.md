@@ -41,8 +41,25 @@ If the second command returns your peer info, then the service is properly confi
 
 This will notify you that a symlink has been created, which means success!  
 
-----
-
 This document assumes you are running a Debian system. Check your operating system's ```systemd``` documentation if 
-you run into trouble.  
+you run into trouble. 
+
+----
+## When Running into Same-Origin Policy Issues
+
+When using the IPFS API, you will almost certainly run into "Cross-Origin Request Rejected" and XHR errors.  
+To mitigate this, run the following commands on the machine running the IPFS daemon:  
+
+```ipfs config --json API.HTTPHeaders.Access-Control-Allow-Origin '["example.com"]'```  
+```ipfs config --json API.HTTPHeaders.Access-Control-Allow-Methods '["GET", "POST"]'```  
+```ipfs config --json API.HTTPHeaders.Access-Control-Allow-Credentials '["true"]'```  
+
+And if you want to use the API from somewhere other than the machine running the IPFS daemon:  
+
+```ipfs config Addresses.API "/ip4/0.0.0.0/tcp/5001"```
+
+Ensure your firewall rules are acceptable to you for this one.
+
+
+
 
