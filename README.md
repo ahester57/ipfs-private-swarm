@@ -37,8 +37,18 @@ Skip these steps if you have a pre-shared ```swarm.key```.
 
 1. ```git clone https://github.com/Kubuxu/go-ipfs-swarm-key-gen```  
 2. ```cd go-ipfs-swarm-key-gen/```  
-3. ```go run ipfs-swarm-key-gen/main.go > $IPFS_PATH/swarm.key```  
+3. :warning: **Next command will Overwrite existing swarm.key**
+4. ```go run ipfs-swarm-key-gen/main.go > $IPFS_PATH/swarm.key```  
 
+## 2.1 Generate swarm.key without Above Repository
+
+As mentioned in https://github.com/ahester57/ipfs-private-swarm/issues/1, you can also generate a `swarm.key` using the following command:
+
+> :warning: **Next command will Overwrite existing swarm.key**
+
+```
+(echo -e '/key/swarm/psk/1.0.0/\n/base16/' ; head -c 32 /dev/urandom | od -t x1 -A none - | tr -d '\n '; echo '') > $IPFS_PATH/swarm.key
+```
 
 ##### I have a pre-shared swarm.key
 
